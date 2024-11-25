@@ -49,12 +49,14 @@ section{
     width:405px;
     height: 60px;
     padding: 2px 2px 2px 3px;
-    text-align: 150px;
     
 }
 
 #IMC_affichage{
-    width: 500px;
-    height: 500px;
-    text-align: 150px;
+    margin-top: 13px;
+    margin-left: 15px;
+}
+#IMC_affichage1{
+
+    margin-left: 15px;
 }
