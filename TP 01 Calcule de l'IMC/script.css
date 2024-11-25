@@ -1,17 +1,36 @@
 body{
+    margin: 0px;
+}
+
+header{
+    filter: opacity(90%);
+    border-radius: 4px;
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 0px;
+    height: 60px;
+    padding: 2px 2px 2px 3px;
+    display: block;
+    color: antiquewhite;
+}
+.titre{
     margin-left: 100px;
+    margin-top: 10px;
 }
 
 h1{
+    margin-left: 100px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
 p{
     margin: 0;
+    margin-left: 100px;
 }
 
 #Poids{
+    margin-left: 100px;
     border: transparent 50%;
     border-radius: 4px ;
     border-color: red;
@@ -20,6 +39,7 @@ p{
     width:400px;
     height: 30px;
     padding: 2px 2px 2px 3px;
+    margin-left: 100px;
 }
 
 #Taille{
@@ -30,6 +50,7 @@ p{
     width:400px;
     height: 30px;
     padding: 2px 2px 2px 3px;
+    margin-left: 100px;
 }
 
 #Calculer_input{
@@ -40,17 +61,27 @@ p{
     width:410px;
     height: 30px;
     padding: 2px 2px 2px 3px;
+    margin-left: 100px;
 }
-section{
+section {
     filter: opacity(80%);
-    border-radius: 4px ;
+    border-radius: 4px;
     background-color: rgb(226, 226, 226);
     font-weight: bold;
-    width:405px;
+    width: 405px;
     height: 60px;
     padding: 2px 2px 2px 3px;
-    
+    display: block;
+    margin-left: 100px;
 }
+
+#balance {
+    width : 50px;
+    height : 50px;
+    float : left;
+    margin-left: 100px;
+}
+
 
 #IMC_affichage{
     margin-top: 13px;
@@ -59,4 +90,20 @@ section{
 #IMC_affichage1{
 
     margin-left: 15px;
+}
+#footer{
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    height: 100px;
+    padding: 2px 2px 2px 3px;
+    margin-top: 100px;
+    text-align:center;
+}
+#copy{
+    
+    width:410px;
+    height: 30px;
+    padding: 2px 2px 2px 3px;
+    color: antiquewhite;
 }
