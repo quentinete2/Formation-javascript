@@ -1,29 +1,45 @@
+const couleur = [];
+
 document.getElementById("btnAjouter").onclick = () => {
-    const fruitInput = document.getElementById('fruit').value;
-    document.getElementById('fruit').value='';
+    
+    const fruitInput = document.getElementById('fruit').value.trim();
+    document.getElementById('fruit').value = '';
 
-    if (fruitInput !="") {
-        const p = document.createElement('tr'); 
-        const p1 = document.createElement('td'); 
-        p1.innerHTML = fruitInput;  
-        const p2 = document.createElement('td'); 
-        const p3 = document.createElement('button'); 
-        p3.className = 'btn btn-danger';
-        
-        p3.onclick=(event)=>{
-            const locate = event.target.closest('tr');
-            locate.remove();
-        }
-        const p4 = document.createElement('i'); 
-        p4.className = 'fa fa-trash';
+    if (fruitInput !== "") {
+        const tr = document.createElement('tr');
+        const tdFruit = document.createElement('td');
+        tdFruit.innerHTML = fruitInput;
+        const tdAction = document.createElement('td');
+        const btnDelete = document.createElement('button');
+        btnDelete.className = 'btn btn-danger';
 
-        p.appendChild(p1);
-        p.appendChild(p2);
-        p2.appendChild(p3);
-        p3.appendChild(p4);
-        document.getElementById('myTbody').appendChild(p);
+        btnDelete.onclick = (event) => {
+            const nom =event.target.closest("tr").querySelector('td').innerHTML
+            const test = confirm('Effacer '+nom+' ?')
+            if ( test) {
+                const row = event.target.closest('tr');
+                row.remove();
+
+                const index = couleur.indexOf(fruitInput);
+                if (index !== -1) {
+                    couleur.splice(index, 1);
+                }
+
+                console.table(couleur);
+            }
+        };
+
+        const iconDelete = document.createElement('i');
+        iconDelete.className = 'fa fa-trash';
+
+        tr.appendChild(tdFruit);
+        tr.appendChild(tdAction);
+        tdAction.appendChild(btnDelete);
+        btnDelete.appendChild(iconDelete);
+
+        document.getElementById('myTbody').appendChild(tr);
+
+        couleur.push(fruitInput);
+        console.table(couleur);
     }
-
 };
-
-
