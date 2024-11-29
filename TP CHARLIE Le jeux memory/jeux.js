@@ -24,13 +24,14 @@ console.log("Tableau mélangé:", tableauMelange);
 let memory = null;
 let memoryIndex = null;
 let one = null;
+compteur = 0;
 
 for (let i = 0; i < tableauMelange.length; i++) {
     console.log(`Index ${i}: ${tableauMelange[i]}`);
 
     const img = document.createElement('img');
     const div = document.createElement('div');
-    img.src = `/TP CHARLIE Le jeux memory/img/${tableauMelange[i]}.webp`;
+    img.src = `./img/${tableauMelange[i]}.webp`;
     img.style.cursor = 'pointer';
     img.className = "img-button";
 
@@ -51,6 +52,24 @@ for (let i = 0; i < tableauMelange.length; i++) {
           memory = null;
           memoryIndex = null;
           one = null;
+          compteur = compteur + 1;
+          console.log(compteur)
+          if (compteur >= 12) {
+            const divs = document.querySelectorAll('body div');
+            divs.forEach(div => div.remove());
+            const gagner = document.createElement('img');
+            gagner.src = `./pngtree-vector-winner-stamp-win-logo-isolated-vector-picture-image_9520289.png`;
+            gagner.className = "gagner";
+            document.querySelector('body').appendChild(gagner);
+
+            const reco = document.createElement('button')
+            reco.className = "recom";
+            reco.id = "recom";
+            document.querySelector('body').appendChild(reco);
+            document.getElementById('recom').onclick = () => {
+              location.reload();
+            };
+          }
         } 
         else {
           img.parentElement.className = "green";
