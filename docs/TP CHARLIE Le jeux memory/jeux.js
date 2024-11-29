@@ -30,7 +30,7 @@ for (let i = 0; i < tableauMelange.length; i++) {
 
     const img = document.createElement('img');
     const div = document.createElement('div');
-    img.src = `/TP CHARLIE Le jeux memory/img/${tableauMelange[i]}.webp`;
+    img.src = `docs/TP CHARLIE Le jeux memory/img/${tableauMelange[i]}.webp`;
     img.style.cursor = 'pointer';
     img.className = "img-button";
 
