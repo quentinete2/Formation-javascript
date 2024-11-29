@@ -1,0 +1,43 @@
+<button id="btnAjouter">Ajouter</button>
+<button id="btnLecture">Lecture</button>
+<button id="btnPATCH">PATCH</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script >
+
+    const url ='https://apprentissage-447a1-default-rtdb.firebaseio.com/'
+    const noeud = 'personnes';
+    const url2 = `${url}${noeud}.json`;
+    document.getElementById("btnAjouter").onclick = async () => {
+    const personne = {prenom: 'Nicolas', nom:'CAGE'}
+    const response = await axios.post(url2,personne);
+    console.log(response.data)
+    const id = response.data.name
+    console.log(id)
+    };
+
+    document.getElementById("btnLecture").onclick = async () => {
+        const response = await axios.get(url2);
+        console.log(response.data)
+        // const objet ={titre:"the matrix",annee:"1999"};
+        // for (let attribut in objet){
+        //     console.log(attribut);
+        //     console.log(objet[attribut]);
+        // }
+        for (let id in data){
+            console.log(id)
+            console.log(data[id])
+        }
+
+    document.getElementById("btnPATCH").onclick = async () => {
+        const id =''
+        const url3 = `${url}${noeud}/${id}.json`
+        const objet = {age: 24};
+        const r = axios.patch(url3, objet);
+        console.log(r.data)
+    }
+    }
+
+</script>

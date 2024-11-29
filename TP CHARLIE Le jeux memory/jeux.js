@@ -44,6 +44,8 @@ for (let i = 0; i < tableauMelange.length; i++) {
       else {
         if (memory === event.target.src && one !== event.target) {
           img.parentElement.className = "green";
+          one.parentElement.classList.remove('green');
+          event.target.parentElement.classList.remove('green');
           one.remove();
           event.target.remove();
           memory = null;
@@ -52,11 +54,12 @@ for (let i = 0; i < tableauMelange.length; i++) {
         } 
         else {
           img.parentElement.className = "green";
+          one.parentElement.classList.remove('green');
+          event.target.parentElement.classList.remove('green');
           memory = null;
           memoryIndex = null;
           one = null;
-          one.parentElement.classList.remove('green');
-          event.target.parentElement.classList.remove('green');
+
         }
       }
     };
