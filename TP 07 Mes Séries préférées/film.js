@@ -47,10 +47,6 @@ function displaySearchResults(series) {
           </button>
         </td>
       `;
-      const fav = document.getElementById('btn btn-outline-secondary');
-      if (fav) 
-      
-
       tbody.appendChild(tr);
     });
 }
