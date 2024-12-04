@@ -31,9 +31,11 @@ reco.className = "recom";
 reco.id = "recom";
 document.querySelector('body').appendChild(reco);
 document.getElementById('recom').onclick = () => {
-  location.reload();            const reco = document.createElement('button')
+  location.reload();            
+  const reco = document.createElement('button')
   reco.className = "recom";
   reco.id = "recom";
+  reco.innerText = 'Reset';
   document.querySelector('body').appendChild(reco);
   document.getElementById('recom').onclick = () => {
     location.reload();
