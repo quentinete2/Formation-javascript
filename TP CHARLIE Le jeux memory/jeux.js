@@ -26,6 +26,19 @@ let memoryIndex = null;
 let one = null;
 compteur = 0;
 
+const reco = document.createElement('button')
+reco.className = "recom";
+reco.id = "recom";
+document.querySelector('body').appendChild(reco);
+document.getElementById('recom').onclick = () => {
+  location.reload();            const reco = document.createElement('button')
+  reco.className = "recom";
+  reco.id = "recom";
+  document.querySelector('body').appendChild(reco);
+  document.getElementById('recom').onclick = () => {
+    location.reload();
+  }}
+
 for (let i = 0; i < tableauMelange.length; i++) {
     console.log(`Index ${i}: ${tableauMelange[i]}`);
 
@@ -62,13 +75,6 @@ for (let i = 0; i < tableauMelange.length; i++) {
             gagner.className = "gagner";
             document.querySelector('body').appendChild(gagner);
 
-            const reco = document.createElement('button')
-            reco.className = "recom";
-            reco.id = "recom";
-            document.querySelector('body').appendChild(reco);
-            document.getElementById('recom').onclick = () => {
-              location.reload();
-            };
           }
         } 
         else {

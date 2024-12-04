@@ -24,6 +24,20 @@ console.log("Tableau mélangé:", tableauMelange);
 let memory = null;
 let memoryIndex = null;
 let one = null;
+compteur = 0;
+
+const reco = document.createElement('button')
+reco.className = "recom";
+reco.id = "recom";
+document.querySelector('body').appendChild(reco);
+document.getElementById('recom').onclick = () => {
+  location.reload();            const reco = document.createElement('button')
+  reco.className = "recom";
+  reco.id = "recom";
+  document.querySelector('body').appendChild(reco);
+  document.getElementById('recom').onclick = () => {
+    location.reload();
+  }}
 
 for (let i = 0; i < tableauMelange.length; i++) {
     console.log(`Index ${i}: ${tableauMelange[i]}`);
@@ -51,6 +65,17 @@ for (let i = 0; i < tableauMelange.length; i++) {
           memory = null;
           memoryIndex = null;
           one = null;
+          compteur = compteur + 1;
+          console.log(compteur)
+          if (compteur >= 12) {
+            const divs = document.querySelectorAll('body div');
+            divs.forEach(div => div.remove());
+            const gagner = document.createElement('img');
+            gagner.src = `./pngtree-vector-winner-stamp-win-logo-isolated-vector-picture-image_9520289.png`;
+            gagner.className = "gagner";
+            document.querySelector('body').appendChild(gagner);
+
+          }
         } 
         else {
           img.parentElement.className = "green";
