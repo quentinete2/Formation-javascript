@@ -6,23 +6,20 @@
     <title>Ma Formation JavaScript</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-
-        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            background-image: url('img/desktop-wallpaper-monster-hunter-rise-screen-21.jpg');
+            background-image: url('./img/1305930.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: #4CAF50;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
             padding: 1.5em 0;
@@ -35,12 +32,12 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         main h2 {
-            color: #4CAF50;
+            color: #216b23;
             margin-bottom: 20px;
             font-size: 1.8em;
         }
@@ -53,16 +50,16 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #4CAF50;
+            color: #216b23;
             font-weight: bold;
             padding: 10px 15px;
-            border: 2px solid #4CAF50;
+            border: 2px solid #216b23;
             border-radius: 5px;
             display: inline-block;
             transition: all 0.3s ease;
         }
         nav ul li a:hover {
-            background-color: #4CAF50;
+            background-color: #216b23;
             color: white;
         }
         footer {
@@ -72,7 +69,6 @@
             font-size: 0.9em;
             color: #777;
         }
-        /* Style pour le bouton flottant */
         .floating-button {
             position: fixed;
             bottom: 20px;
@@ -91,6 +87,7 @@
         .floating-button:hover {
             background-color: #45a049;
         }
+
     </style>
 </head>
 <body>
@@ -115,12 +112,32 @@
     <footer>
         &copy; 2024 Ma Formation JavaScript. Tous droits réservés.
     </footer>
-    
-    <!-- Bouton flottant vers README -->
+    <img src="img/castle_ruins.png" alt="Château en Ruine" class="castle">
     <button class="floating-button" onclick="window.location.href='https://quentinete2.github.io/README/'">
-        Voir Page d'accueille
+        Voir Page d'accueil
     </button>
+    <div class="footer-name">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        Quentin Lesprit
+        <style>
+            .footer-name {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 1.2em;
+                color: white;
+                font-weight: bold;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 5px 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                font-family: 'Lobster', sans-serif;  /* Application de la police Lobster */
+            }
+
+        </style>
+    </div>
 </body>
 </html>
+
 
 
