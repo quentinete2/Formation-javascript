@@ -20,7 +20,6 @@
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
-            
         }
         header {
             background-color: #4CAF50;
@@ -73,6 +72,25 @@
             font-size: 0.9em;
             color: #777;
         }
+        /* Style pour le bouton flottant */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .floating-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -96,8 +114,14 @@
         </nav>
     </main>
     <footer>
-        &copy; 2024 Ma Formation JavaScript. Tous droits réservés.1
+        &copy; 2024 Ma Formation JavaScript. Tous droits réservés.
     </footer>
+    
+    <!-- Bouton flottant vers README -->
+    <button class="floating-button" onclick="window.location.href='https://quentinete2.github.io/README/'">
+        Voir README
+    </button>
 </body>
 </html>
+
 
