@@ -29,6 +29,7 @@ compteur = 0;
 const reco = document.createElement('button')
 reco.className = "recom";
 reco.id = "recom";
+reco.innerText = 'Reset';
 document.querySelector('body').appendChild(reco);
 document.getElementById('recom').onclick = () => {
   location.reload();            
