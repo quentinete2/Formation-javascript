@@ -18,13 +18,11 @@ function melanger(tab) {
   
 const tableauMelange = melanger(tab2);
 
-console.log("Tableau original:", tab2);
-console.log("Tableau mélangé:", tableauMelange);
-
 let memory = null;
 let memoryIndex = null;
 let one = null;
-compteur = 0;
+const debut = new Date();
+let compteur = 0
 
 const reco = document.createElement('button')
 reco.className = "recom";
@@ -32,25 +30,20 @@ reco.id = "recom";
 reco.innerText = 'Reset';
 document.querySelector('body').appendChild(reco);
 document.getElementById('recom').onclick = () => {
-  location.reload();            
-  const reco = document.createElement('button')
+  location.reload();            const reco = document.createElement('button')
   reco.className = "recom";
   reco.id = "recom";
-  reco.innerText = 'Reset';
   document.querySelector('body').appendChild(reco);
   document.getElementById('recom').onclick = () => {
     location.reload();
   }}
 
 for (let i = 0; i < tableauMelange.length; i++) {
-    console.log(`Index ${i}: ${tableauMelange[i]}`);
-
     const img = document.createElement('img');
     const div = document.createElement('div');
     img.src = `./img/${tableauMelange[i]}.webp`;
     img.style.cursor = 'pointer';
     img.className = "img-button";
-
     img.onclick = (event) => {
       if (memory === null) {
           memory = event.target.src;
@@ -69,7 +62,7 @@ for (let i = 0; i < tableauMelange.length; i++) {
           memoryIndex = null;
           one = null;
           compteur = compteur + 1;
-          console.log(compteur)
+          // console.log(compteur)
           if (compteur >= 12) {
             const divs = document.querySelectorAll('body div');
             divs.forEach(div => div.remove());
@@ -77,7 +70,14 @@ for (let i = 0; i < tableauMelange.length; i++) {
             gagner.src = `./pngtree-vector-winner-stamp-win-logo-isolated-vector-picture-image_9520289.png`;
             gagner.className = "gagner";
             document.querySelector('body').appendChild(gagner);
-
+            const fin = new Date();
+            const duree = fin - debut;
+            console.log(`Durée : ${duree} ms`);
+            const temp = document.createElement('div')
+            temp.className = "temp";
+            temp.id = "temp";
+            temp.innerText = `Durée : ${duree} ms`;
+            document.querySelector('body').appendChild(temp);
           }
         } 
         else {
